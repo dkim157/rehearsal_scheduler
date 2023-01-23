@@ -5,7 +5,6 @@ Allows you to verify cast availability
 To run:
 either
 1. open terminal, navigate to where you downloaded the file, and type "python3 app.py" (if that doesn't work, try "python app.py")
-2. right-click on the file, hover over "open with", and click "python launcher"
 
 follow the prompts: 
 1. valid days are "M", "T", "Th", and "F".
