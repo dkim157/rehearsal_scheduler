@@ -32,6 +32,11 @@ scenes = {
     '2.09': ['Isabel', 'Camille', 'Shandeigh', 'Jett', 'Roselyn']
 }
 
+bach = ['1.02a', '1.02b', '1.03', '1.07', '1.08', '1.09', '1.11', '1.12', '1.15', '1.16', '2.02', '2.03', '2.05a', '2.05b']
+design = ['1.04', '1.10', '1.13', '1.14', '2.01', '2.08', '2.09']
+pageant = ['1.05', '1.06', '1.17', '1.18', '2.04', '2.06', '2.07a', '2.07b', '2.07c']
+
+
 cast = {
     'Camille': ['M', 'T', 'Th', 'F'],
     'Isabel': ['M', 'Th', 'F'],
@@ -93,7 +98,16 @@ def all_scenes_exist(line):
 def select_scenes():
     while True:
         line = input('Choose 1 or more scenes (separated by space): ')
-        if all_scenes_exist(line):
+        # add "bachelorette", "fashion", and "pageant" options to print all scene availabilities for that day
+        if line=='all':
+            return scenes.keys()
+        elif line=='bach':
+            return bach
+        elif line=='design':
+            return design
+        elif line=='pageant':
+            return pageant
+        elif all_scenes_exist(line):
             return line.split()
 
 def print_availabilities(scene, available, unavailable):
